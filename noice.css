@@ -1,83 +1,165 @@
-*{
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: Century Gothic;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
 }
 
-header{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../hdbgg.jpg);
+/* Dark Theme Base */
+body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url(../hdbgg.jpg) no-repeat center center/cover;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
-ul{
-    list-style-type: none;
+/* Navigation */
+ul.nav {
+    list-style: none;
     float: right;
     margin-top: 25px;
-    }
-     
-ul li{
-        display: inline-block;
-       
-    }
-
-ul li  a{
-        text-decoration: none;
-        color: #fff;
-        padding: 5px 20px;
-        border: 1px solid transparent;
-        transition: 0.6s ease;
-    }
-ul li a:hover{
-    background-color: #fff;
-    color:black;
 }
-ul li.active a{
-    background-color: #fff;
-    color:black;
+ul.nav li {
+    display: inline-block;
 }
-
-.logo img{
-float: left;
-width: 100px;
-height:auto;
-margin-top: 5px;
-}
-
-.main{
-    max-width: 1200px;
-    margin:auto;
-}
-
-.title{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.title h1{
-    color: white;
-    font-size: 70px;
-}
-
-.button{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin-top: 30px;
-}
-
-.btn{
-    border: 1px solid whitesmoke;
-    padding: 10px 30px;
-    color:white;
+ul.nav li a {
     text-decoration: none;
-    transition: 0.6s ease-in-out;
+    color: #e6edf3;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: 0.3s ease;
 }
-.btn:hover{
-    background-color: #fff;
-    color:black;
+ul.nav li a:hover,
+ul.nav li.active a {
+    background-color: #58a6ff;
+    color: #0d1117;
+}
+
+/* Logo */
+.logo img {
+    float: left;
+    width: 80px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Title */
+.title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.title h1 {
+    font-size: 70px;
+    color: #e6edf3;
+    animation: fadeIn 2s ease forwards;
+}
+.subtitle {
+    font-size: 20px;
+    color: #8b949e;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.button {
+    margin-top: 20px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn {
+    display: inline-block;
+    border: 1px solid #58a6ff;
+    padding: 10px 25px;
+    margin: 10px;
+    color: #58a6ff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+.btn:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+}
+.glow {
+    box-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #58a6ff;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+/* Projects */
+#projects {
+    padding: 80px 10%;
+    background: #161b22;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.project-card {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card h3 {
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+.project-card p {
+    color: #c9d1d9;
+    margin-bottom: 15px;
+}
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 0px 15px #58a6ff44;
+}
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #58a6ff;
+    border: 1px solid #58a6ff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+.project-link:hover {
+    background: #58a6ff;
+    color: #0d1117;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 2s ease forwards; }
+.fade-up { animation: fadeIn 1.5s ease forwards; }
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
