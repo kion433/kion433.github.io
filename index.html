@@ -4,34 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ion, The Electrophile</title>
+    <title>Aayan Shah | Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/noice.css">
-
 </head>
 <body>
-    <header>
+    <!-- HEADER / NAV -->
+    <header id="home">
         <div class="main">
             <div class="logo">
-                <img src="A.png" >
+                <img src="A.png" alt="Logo">
             </div>
-            <ul>
-                <li class="active">
-                    <a href="#">Home</a></li>
-                    <li> <a href="#">Services</a></li>
-                        <li> <a href="#">Gallery</a></li>
-                            <li><a href="#">About</a></li>
-                                <li> <a href="#">Donate</a>
-                </li>
+            <ul class="nav">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#donate">Donate</a></li>
             </ul>
         </div>
         
         <div class="title">
-            <h1> Welcome!</h1>
+            <h1 class="fade-in">Welcome, I’m Aayan</h1>
+            <p class="subtitle">Building code, machines, and ideas into reality</p>
         </div>
         <div class="button">
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn" target="_BLANK"> Don't click!</a>
-            <a href="#" class="btn">[underDevelopment]</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn glow" target="_BLANK">Don’t click!</a>
+            <a href="#projects" class="btn glow">Explore Projects</a>
         </div>
     </header>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card fade-up">
+                <h3>AvayLable – Skill Sharing App</h3>
+                <p>Cross-platform mobile app for students to exchange tutoring and rides. Built with React Native and Neon PostgreSQL.</p>
+                <a href="https://github.com/aayans314/AvayLable_Locus" target="_blank" class="project-link">GitHub</a>
+            </div>
+
+            <div class="project-card fade-up">
+                <h3>16-bit RISC CPU & Assembler</h3>
+                <p>Designed a modular 16-bit CPU in VHDL with custom ISA. Built a two-pass Python assembler producing ROM files.</p>
+                <a href="https://github.com/aayans314/RISC-CPU-VHDL-Core" target="_blank" class="project-link">CPU</a>
+                <a href="https://github.com/aayans314/Assembler-VHDL-2Pass-CPU" target="_blank" class="project-link">Assembler</a>
+            </div>
+
+            <div class="project-card fade-up">
+                <h3>Voronoi Game on Map</h3>
+                <p>Algorithmic game theory project using computational geometry. Achieved a 96.95% win rate against greedy baselines.</p>
+                <a href="https://github.com/aayans314/Voronoi-Game" target="_blank" class="project-link">GitHub</a>
+            </div>
+
+            <div class="project-card fade-up">
+                <h3>AI Notetaking App</h3>
+                <p>Cross-platform app that transcribes lectures with Whisper and summarizes with Hugging Face models. Supports searchable notes.</p>
+                <a href="https://github.com/aayans314/NoteApp" target="_blank" class="project-link">GitHub</a>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>
